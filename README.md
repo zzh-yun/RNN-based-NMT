@@ -2,6 +2,8 @@
 
 A PyTorch implementation of RNN-based Neural Machine Translation system for Chinese-to-English translation, featuring LSTM encoder-decoder architecture with attention mechanisms.
 
+⭐⭐⭐Because the github cannot upload big files, the checkpoints of the model is upload to huggingface. If you want to use our model, please download the checkpoints from huggingface:  https://huggingface.co/DarcyCheng/RNN-based-NMT
+
 ## Introduction
 
 This repository implements a RNN-based Neural Machine Translation system with the following key components:
