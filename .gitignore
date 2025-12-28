@@ -1,6 +1,7 @@
 thirdparty
 save_dir
 outputs
+checkpoints
 .cursor
 .vscode
 training_metrics.json
