@@ -203,7 +203,7 @@ Training metrics are automatically saved to `training_metrics.json` for visualiz
 
 ## Acknowledgement
 
-感谢以下几个仓库：
+I acknowledge all the open-source contributors for the following projects to make this work possible:
 
 1. **Jieba** (Chinese word segmentation tool): [https://github.com/fxsjy/jieba](https://github.com/fxsjy/jieba)
 
