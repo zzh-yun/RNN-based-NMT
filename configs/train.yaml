@@ -1,0 +1,29 @@
+# train_config
+data_root: "/data/250010009/course/nlpAllms/data/translation_dataset_zh_en"
+output_dir: "/data/250010009/course/nlpAllms/project/outputs"
+vocav_save_dir: "/data/250010009/course/nlpAllms/project/RNN_NMT/save_dir/vocab_rnn.pkl"
+model_save_dir: "/data/250010009/course/nlpAllms/project/RNN_NMT/save_dir/model_rnn.pt"
+seed: 1203
+vocab_size: 32000
+freq_cutoff: 2   # 词本来就不多，还是用1比较好
+word_embed_dim: 256
+# char_embed_dim: 50
+hidden_size: 256
+dropout_rate: 0.3
+kernel_size: 5
+padding: 1
+learning_rate: 5e-5  # Reduced from 1e-4 for more stable training
+lr_decay: 0.8  # Changed from 0.5 to 0.8 for gentler decay
+clip_grad: 5.0
+batch_size: 128
+max_epochs: 50   # github上的权重跑了100个epoch，消融实验跑50个
+max_num_trial: 6
+patience_limit: 5
+teacher_forcing_ratio: 1.0  # Reduced from 1.0 to reduce exposure bias. 1.0 = Teacher Forcing, 0.0 = Free Running
+frequency_penalty: 0.5  # Frequency penalty to suppress high-frequency words (0.0-1.0, higher = more penalty)
+attention_type: "dot-product"  # Attention mechanism type: "dot-product", "multiplicative", or "additive"
+decoding_strategy: "beam-search"  # Decoding strategy: "greedy" or "beam-search"
+beam_size: 5  # Beam size for beam-search decoding (only used when decoding_strategy is "beam-search")
+experiment_name: null  # Optional: custom experiment name. If null, auto-generated from config parameters
+resume_from_model: null # "save_dir/model_rnn.pt"  # Path to model file to resume training (e.g., "save_dir/model_rnn.pt" or null to start from scratch)
+log_file: "train.log"

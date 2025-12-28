@@ -1,0 +1,7 @@
+thirdparty
+save_dir
+outputs
+.cursor
+.vscode
+training_metrics.json
+__pycache__
